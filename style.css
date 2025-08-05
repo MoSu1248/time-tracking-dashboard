@@ -1,0 +1,227 @@
+:root{
+/* Primary */
+
+--Purple600: hsl(246, 80%, 60%);
+--Orange300 : hsl(15, 100%, 70%);
+--Blue300: hsl(195, 74%, 62%);
+--Pink400 : hsl(348, 100%, 68%);
+--Green400 : hsl(145, 58%, 55%);
+--Purple700 : hsl(264, 64%, 52%);
+--Yellow300 : hsl(43, 84%, 65%);
+
+/* Neutral  */
+
+--Navy950: hsl(226, 43%, 10%);
+--Navy900: hsl(235, 46%, 20%);
+--Purple500: hsl(235, 45%, 61%);
+--Navy200: hsl(236, 100%, 87%);
+--White: hsl(0, 0%, 100%);
+
+/* Typography */
+
+--fontFamily:"Rubik", sans-serif ; 
+
+--fontSize: 18px;
+
+--fontW300: 300;
+--fontW400: 400;
+--fontW500: 500;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontFamily);
+    background-color: var(--Navy950);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    width: 60%;
+    height: fit-content;
+    color: var(--White);
+    font-size: var(--fontSize);
+}
+
+.card_header{
+    font-weight: var(--fontW500);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.card_header img{
+    cursor: pointer;
+}
+
+.user_card{
+    grid-row: span 2;
+    height: calc(100% - 10px); 
+    background-color: var(--Navy900);
+    border-radius: 10px;
+}
+
+.card{
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--Navy900);
+    min-width: 15rem;
+    position: relative;
+    top: -10px; /* Overlap the top header slightly */
+    transition: 0.2s ease;
+}
+
+.card:hover{
+    top:-4px;
+    transition: 0.2s ease;
+
+}
+
+.card_top_styling{
+  height: 3rem;
+  border-radius: 10px;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0 ;
+  padding-right: 2rem;
+}
+
+
+
+
+.card_work{
+      background: url('./images/icon-work.svg') no-repeat right 10px top -10px;
+      background-color: var(--Orange300);
+}
+
+.card_play{
+      background: url('./images/icon-play.svg') no-repeat right 10px top -10px;
+      background-color: var(--Blue300);
+}
+.card_study{
+      background: url('./images/icon-study.svg') no-repeat right 10px top -10px;
+      background-color: var(--Pink400);
+}
+.card_exercise{
+      background: url('./images/icon-exercise.svg') no-repeat right 10px top -10px;
+      background-color: var(--Green400);
+}
+.card_social{
+      background: url('./images/icon-social.svg') no-repeat right 10px top -10px;
+      background-color: var(--Purple700);
+}
+.card_self{
+      background: url('./images/icon-self-care.svg') no-repeat right 10px top -10px;
+      background-color: var(--Yellow300);
+}
+
+
+
+.card h1{
+    font-weight: var(--fontW300);
+    font-size: 3.5rem;
+    margin-top: 2rem;
+}
+
+time{
+    font-weight: var(--fontW300);
+    font-size: 0.9rem;
+    color: var(--Navy200);
+}
+
+.user_info{
+    background-color: var(--Purple600);
+    padding: 2rem;
+    border-radius: 10px;
+    height: 70%;
+}
+
+.user_info img{
+    width: 4rem;
+    border: 2px solid var(--White);
+    border-radius: 100%;
+}
+
+.user_info p{
+    font-weight: var(--fontW300);
+    color: var(--Navy200);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+
+}
+
+
+.user_info h2{
+    font-size: 2rem;
+    font-weight: var(--fontW300);
+    margin-top: 0.5rem;
+}
+
+
+.options_list{
+    list-style: none;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.options_list button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--Purple500);
+    text-align: left;
+    font-weight: var(--fontW300);
+    font-size: 1rem;
+}
+
+.options_list button:hover{
+    color: var(--White);
+}
+
+
+.options_list button.active{
+    color: var(--White);
+}
+
+
+@media (max-width: 600px) {
+
+.options_list{
+    flex-direction: row;
+}
+
+.user_info{
+    
+}
+    .user_card{
+        height: 80%;
+    }
+
+    body{
+        height: 100%;
+    }
+
+    .wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 48vh;
+    color: var(--White);
+    font-size: var(--fontSize);
+}
+}
