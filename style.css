@@ -98,9 +98,6 @@ body{
   padding-right: 2rem;
 }
 
-
-
-
 .card_work{
       background: url('./images/icon-work.svg') no-repeat right 10px top -10px;
       background-color: var(--Orange300);
@@ -126,8 +123,6 @@ body{
       background: url('./images/icon-self-care.svg') no-repeat right 10px top -10px;
       background-color: var(--Yellow300);
 }
-
-
 
 .card h1{
     font-weight: var(--fontW300);
@@ -199,16 +194,89 @@ time{
 }
 
 
-@media (max-width: 600px) {
+
+@media (max-width: 700px) {
 
 .options_list{
     flex-direction: row;
 }
 
-.user_info{
-    
-}
+
     .user_card{
+        margin-top: 2rem;
+        height: 80%;
+    }
+
+    body{
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper{
+    display: grid;
+    grid-template-columns: 1fr    ;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    width: 80%;
+    height: fit-content;
+    color: var(--White);
+    font-size: var(--fontSize);
+}
+
+.user_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_info img{
+    height: 5rem;
+    width: 5rem;
+}
+
+.user_info p{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+
+
+.user_info h2{
+    font-size: 1.5rem;
+    font-weight: var(--fontW300);
+    
+    display: block
+}
+
+.user_info__details{
+    margin-left: 1rem;
+}
+
+.card h1{
+    font-size: 2rem;
+    display: inline-block;
+    width: 60%;
+}
+
+.card time{
+    display: inline;
+    float: right;
+    float:right;
+    margin-top: 2.8rem;
+}
+
+
+}
+
+@media (max-width: 400px) {
+
+.options_list{
+    flex-direction: row;
+}
+
+
+    .user_card{
+        margin-top: 2rem;
         height: 80%;
     }
 
